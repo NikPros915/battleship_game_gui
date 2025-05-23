@@ -3,11 +3,9 @@ from tkinter import messagebox
 import random
 from datetime import datetime
 
-# Constants
 BOARD_SIZE = 6
 SHIP_SIZES = [3, 2, 2, 1, 1, 1]
 
-# Factory Pattern for Ship Creation
 class ShipFactory:
     @staticmethod
     def create_ship(size, positions):

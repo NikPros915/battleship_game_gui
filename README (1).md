@@ -59,7 +59,7 @@ class Player:
 
 ---
 
-### Dizaino šablonas – Factory
+### Dizaino šablonas – Factory Method
 Laivai kuriami naudojant `ShipFactory`:
 ```python
 class ShipFactory:

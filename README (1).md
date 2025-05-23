@@ -24,9 +24,9 @@ python main.py
 
 ## 2. Analizė / Įgyvendinimas
 
-### ✅ Objektinio programavimo principai:
+### Objektinio programavimo principai:
 
-#### 🔒 Inkapsuliacija
+#### Inkapsuliacija
 Kiekviena klasė turi savo duomenis ir metodus, pvz.:
 ```python
 class Ship:
@@ -36,20 +36,20 @@ class Ship:
         self.hits = set()
 ```
 
-#### 📦 Abstrakcija
+#### Abstrakcija
 Vartotojas naudoja paprastus metodus, o visa logika paslėpta:
 ```python
 self.player_shoot(row, col)
 ```
 
-#### 🔁 Polimorfizmas
+#### Polimorfizmas
 Metodas `receive_attack()` veikia skirtingai skirtingiems objektams:
 ```python
 self.player.board.receive_attack(pos)
 self.ai.board.receive_attack(pos)
 ```
 
-#### 🧬 Paveldėjimas
+#### Paveldėjimas
 `Player` klasė struktūriškai tinkama būti išplečiama (pvz. AI žaidėjui ar žmogui):
 ```python
 class Player:
@@ -59,7 +59,7 @@ class Player:
 
 ---
 
-### 📐 Dizaino šablonas – Factory
+### Dizaino šablonas – Factory
 Laivai kuriami naudojant `ShipFactory`:
 ```python
 class ShipFactory:
@@ -68,31 +68,31 @@ class ShipFactory:
         return Ship(size, positions)
 ```
 
-### 💾 Failų rašymas
+### Failų rašymas
 Kiekvienas ėjimas įrašomas į failą:
 ```python
 self.log(f"Player shoots at {pos} - {'HIT' if hit else 'MISS'}")
 ```
 
-### 🧪 Testavimas
+### Testavimas
 Programos komponentai testuojami `unittest` biblioteka:
 ```python
 def test_ship_hit_and_sunk(self):
     ship = Ship(2, [(0, 0), (0, 1)])
 ```
 
-### 🎨 Grafinė sąsaja (GUI)
+### Grafinė sąsaja (GUI)
 Sukurta naudojant `tkinter`. Mygtukai keičia spalvą pagal šūvio rezultatą. Žaidimas vyksta realiu laiku.
 
 ---
 
 ## 3. Rezultatai
 
-- ✔️ Sukurtas pilnai veikiantis žaidimas su 6x6 lenta
-- ✔️ Pritaikyti visi 4 OOP principai ir Factory Pattern
-- ✔️ Grafinė sąsaja leidžia žaisti patogiai ir intuityviai
-- ✔️ Veiksmų žurnalas fiksuojamas faile
-- ⚠️ Iššūkis: tinkamai sudėti laivus be persidengimo ir su tarpu tarp jų
+-  Sukurtas pilnai veikiantis žaidimas su 6x6 lenta
+-  Pritaikyti visi 4 OOP principai ir Factory Pattern
+- Grafinė sąsaja leidžia žaisti patogiai ir intuityviai
+- Veiksmų žurnalas fiksuojamas faile
+-  Iššūkis: tinkamai sudėti laivus be persidengimo ir su tarpu tarp jų
 
 ---
 
@@ -105,13 +105,3 @@ Sukurta naudojant `tkinter`. Mygtukai keičia spalvą pagal šūvio rezultatą. 
   - 2 žaidėjų režimas
   - Sunkumo lygiai AI
   - Laivų išdėstymo pasirinkimas vartotojui
-
----
-
-## 5. Šaltiniai
-
-- Python OOP: https://docs.python.org/3/tutorial/classes.html
-- `tkinter`: https://docs.python.org/3/library/tkinter.html
-- `unittest`: https://docs.python.org/3/library/unittest.html
-- Markdown: https://www.markdownguide.org/basic-syntax/
-- Design Patterns: https://refactoring.guru/design-patterns

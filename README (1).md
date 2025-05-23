@@ -50,11 +50,7 @@ self.ai.board.receive_attack(pos)
 ```
 
 #### Paveldėjimas
-`Player` klasė struktūriškai tinkama būti išplečiama (pvz. AI žaidėjui ar žmogui):
-```python
-class Player:
-    def __init__(self, is_ai=False):
-        self.board = Board()
+Visos klasės yra savarankiškos, tačiau jeigu yra noras galima išplesti žaidimo objektų funkcionalumą
 ```
 
 ---
